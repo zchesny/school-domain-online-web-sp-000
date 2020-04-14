@@ -1,7 +1,7 @@
 # code here!
 class School
   attr_accessor :name, :roster
-  
+
   def initialize(name)
     @name = name
     @roster = {}
@@ -16,7 +16,7 @@ class School
   end
 
   def sort()
-    @roster.map{|grade, students| students.sort}
+    @roster.map{|grade, students| @roster[grade] = students.sort}
   end
 
 end
