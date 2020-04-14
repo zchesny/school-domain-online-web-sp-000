@@ -10,4 +10,12 @@ class School
     roster.key?(grade) ? @roster[grade] << name : @roster[grade] = [name]
   end
 
+  def grade(grade)
+    @roster[grade]
+  end
+
+  def sort()
+    @roster.map{|grade, students| students.sort}
+  end
+
 end
